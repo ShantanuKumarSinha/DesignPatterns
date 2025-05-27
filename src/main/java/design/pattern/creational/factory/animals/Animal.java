@@ -1,4 +1,4 @@
-package design.pattern.creational.factory;
+package design.pattern.creational.factory.animals;
 
 import design.pattern.creational.factory.enums.FoodType;
 

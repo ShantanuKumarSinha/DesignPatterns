@@ -1,6 +1,6 @@
-package design.pattern.creational.factory.animals;
+package design.pattern.creational.factory.animals.impl;
 
-import design.pattern.creational.factory.Animal;
+import design.pattern.creational.factory.animals.Animal;
 import design.pattern.creational.factory.enums.FoodType;
 
 public class Bear implements Animal {

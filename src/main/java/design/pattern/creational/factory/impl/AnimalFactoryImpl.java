@@ -1,28 +1,29 @@
 package design.pattern.creational.factory.impl;
 
-import design.pattern.creational.factory.Animal;
+import design.pattern.creational.factory.animals.Animal;
 import design.pattern.creational.factory.AnimalFactory;
-import design.pattern.creational.factory.animals.Bear;
-import design.pattern.creational.factory.animals.Cow;
-import design.pattern.creational.factory.animals.Dog;
+import design.pattern.creational.factory.animals.impl.Bear;
+import design.pattern.creational.factory.animals.impl.Cow;
+import design.pattern.creational.factory.animals.impl.Dog;
+import design.pattern.creational.factory.enums.FoodType;
 
 public class AnimalFactoryImpl implements AnimalFactory {
 
-  @Override
-  public Animal createAnimal(String animalType) {
-    switch (animalType.toUpperCase()) {
-      case "DOG" -> {
-        return new Dog();
-      }
-      case "COW" -> {
-        return new Cow();
-      }
-      case "BEAR" -> {
-        return new Bear();
-      }
-      default -> {
-        throw new IllegalArgumentException("Unknown animal type: " + animalType);
-      }
+    @Override
+    public Animal createAnimal(FoodType foodType) {
+        switch (foodType) {
+            case FoodType.CARNIVORE -> {
+                return new Dog();
+            }
+            case FoodType.HERBIVORE -> {
+                return new Cow();
+            }
+            case FoodType.OMNIVORE -> {
+                return new Bear();
+            }
+            default -> {
+                throw new IllegalArgumentException("Unknown food type: " + foodType);
+            }
+        }
     }
-  }
 }
