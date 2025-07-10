@@ -1,4 +1,7 @@
-package design.pattern.structural.decorator;
+package design.pattern.structural.decorator.addon.impl;
+
+import design.pattern.structural.decorator.addon.AddOn;
+import design.pattern.structural.decorator.beverage.Beverage;
 
 public class Mocha extends AddOn {
     public Mocha(Beverage beverage) {

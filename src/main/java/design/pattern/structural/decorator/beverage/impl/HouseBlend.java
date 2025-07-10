@@ -1,4 +1,6 @@
-package design.pattern.structural.decorator;
+package design.pattern.structural.decorator.beverage.impl;
+
+import design.pattern.structural.decorator.beverage.Beverage;
 
 public class HouseBlend implements Beverage {
 
